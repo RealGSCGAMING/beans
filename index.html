@@ -10,13 +10,20 @@
   <body>
     <div class="mainContent" id="mainContent">
       <h1>Bean Spawner</h1>
-      <button class="paddedButton" id="mainButton">Spawn Single Bean</button>
-      <button class="paddedButton" id="mainButton2">Spawn Five Beans</button>
-      <button class="paddedButton" id="mainButton3">Spawn Twenty Beans</button>
-      <button class="paddedButton" id="mainButton4">Spawn Fifty Beans</button>
-      <button class="paddedButton" id="mainButton5" style="background-color: yellow;">⚠️ SPAWN 100 BEANS ⚠️</button>
-      <button class="paddedButton" id="mainButton6" style="background-color: lightblue; font-size: 1em;">Custom Amount</button>
-      <p id="prompt">Total Beans: 0</p>
+      <div class="paddedBody">
+      <button class="paddedButton" id="singleButton">Spawn Single Bean</button>
+      <button class="paddedButton" id="fiveButton">Spawn Five Beans</button>
+      </div>
+      <button class="paddedButton" id="expandButton" style="background-color: lightgreen; font-size: 1em;">More Options
+      </button>
+      <div class="paddedBody" id="expandMenu" style="display: none;">
+      <button class="paddedButton" id="twentyButton">Spawn Twenty Beans</button>
+      <button class="paddedButton" id="fiftyButton">Spawn Fifty Beans</button>
+      <button class="paddedButton" id="hundredButton" style="background-color: yellow;">⚠️ SPAWN 100 BEANS ⚠️</button>
+      <button class="paddedButton" id="customButton" style="background-color: lightblue;">Custom Amount</button>
+      </div>
+      <h1 id="prompt">Total Beans: 0</h1>
+      <h2 id="spawnLog">Waiting for input.</h2>
       <button class="paddedButton" id="closeButton" style="background-color: lightcoral;">Remove All Beans</button>
     </div>
     
