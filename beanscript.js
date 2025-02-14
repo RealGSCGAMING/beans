@@ -1,9 +1,9 @@
 const content = document.getElementById("mainContent");
 
-let bean = Math.floor(Math.random() * 10);
+let bean = Math.floor(Math.random() * 11);
 
 if (Math.floor(Math.random() * 25) == 0) {
-  bean = -1
+  bean = -1;
 }
 
 if (bean == -1) {
@@ -60,4 +60,19 @@ if (bean == 8) {
 if (bean == 9) {
   content.innerHTML =
     "<h1>Bean Burger?</h1><img src='./beans/burgerbean.jpg' style='width:250; height:250' />";
+}
+
+if (bean == 10) {
+  content.innerHTML =
+    "<h1>Winged Bean</h1><img src='./beans/wingedbean.jpg' style='width:250; height:250' />";
+}
+
+if (bean == 11) {
+  content.innerHTML =
+    "<h1>Chocolate Bean</h1><img src='./beans/chocolatebean.jpg' style='width:250; height:250' />";
+}
+
+if (bean == 12) {
+  content.innerHTML =
+    "<h1>Spring Bean</h1><img src='./beans/springbean.jpg' style='width:250; height:250' />";
 }
