@@ -1,6 +1,6 @@
 const content = document.getElementById("mainContent");
 
-let bean = Math.floor(Math.random() * 6);
+let bean = Math.floor(Math.random() * 10);
 
 if (Math.floor(Math.random() * 25) == 0) {
   bean = -1
