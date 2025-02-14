@@ -74,5 +74,5 @@ if (bean == 11) {
 
 if (bean == 12) {
   content.innerHTML =
-    "<h1>Spring Bean</h1><img src='./beans/springbean.jpg' style='width:250; height:250' />";
+    "<h1>Spring Bean</h1><img src='./beans/springbean.webp' style='width:250; height:250' />";
 }
