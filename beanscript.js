@@ -12,8 +12,18 @@ setTimeout(function () {
   else if (Math.floor(Math.random() * 25) == 0) {
     bean = -2;
   }
-  else if (Math.floor(Math.random() * 1000) == 0) {
+  else if (Math.floor(Math.random() * 2000) == 0) {
     bean = -3;
+  }
+  else if (Math.floor(Math.random() * 1000) == 0) {
+    bean = -4;
+  }
+
+  if (bean == -4) {
+    content.innerHTML =
+      "<h1 style='font-size: 2em;'>Green Screen Car Crash</h1><img src='./beans/crash.gif' style='width:500; height:250' />";
+    document.body.style.backgroundColor = "green";
+    window.resizeTo(750, 750)
   }
 
   if (bean == -3) {
