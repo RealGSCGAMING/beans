@@ -1,50 +1,37 @@
 const content = document.getElementById("mainContent");
 
+let bean = window["bean"];
+
 content.innerHTML =
   "<h1>Rolling bean...</h1><img src='./beans/rolling.png' style='width:250; height:250' />";
 
 setTimeout(function () {
-  let bean = Math.floor(Math.random() * 13);
-
-  if (Math.floor(Math.random() * 50) == 0) {
-    bean = -1;
-  }
-  else if (Math.floor(Math.random() * 25) == 0) {
-    bean = -2;
-  }
-  else if (Math.floor(Math.random() * 2000) == 0) {
-    bean = -3;
-  }
-  else if (Math.floor(Math.random() * 1000) == 0) {
-    bean = -4;
-  }
-
   if (bean == -4) {
     content.innerHTML =
       "<h1 style='font-size: 2em;'>Green Screen Car Crash</h1><img src='./beans/crash.gif' style='width:500; height:250' />";
     document.body.style.backgroundColor = "green";
-    window.resizeTo(750, 750)
+    window.resizeTo(750, 750);
   }
 
   if (bean == -3) {
     content.innerHTML =
       "<h1 style='font-size: 3em;'>ReactiveWolfGaming</h1><img src='./beans/reactivewolf.png' style='width:750; height:500' />";
     document.body.style.backgroundColor = "blue";
-    window.resizeTo(1000, 1000)
+    window.resizeTo(1000, 1000);
   }
-  
+
   if (bean == -2) {
     content.innerHTML =
       "<h1>Pineapple.</h1><img src='./beans/pineapple.png' style='width:350; height:250' />";
     document.body.style.backgroundColor = "yellow";
-    window.resizeTo(500, 500)
+    window.resizeTo(500, 500);
   }
 
   if (bean == -1) {
     content.innerHTML =
       "<h1>GOLDEN BEAN!!!!</h1><img src='./beans/goldenbean.webp' style='width:250; height:250' />";
     document.body.style.backgroundColor = "gold";
-    window.resizeTo(750, 750)
+    window.resizeTo(750, 750);
   }
 
   if (bean == 0) {
@@ -111,11 +98,10 @@ setTimeout(function () {
     content.innerHTML =
       "<h1>Spring Bean</h1><img src='./beans/springbean.webp' style='width:250; height:250' />";
   }
-}, 750)
-
-
-
+}, 750);
 
 /*for (let i = 0; i < 500; i++) {
   window.moveBy(1, 1)
 }*/
+
+// alert(window['testVar'])

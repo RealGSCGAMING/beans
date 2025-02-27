@@ -55,7 +55,7 @@ body {
   margin-top: 10px;
   margin-left: 5px;
   margin-right: 5px;
-  transition: transform 0.1s
+  transition: transform 0.1s;
 }
 
 .paddedButton:hover {
