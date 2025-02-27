@@ -12,6 +12,10 @@ const spawnLog = document.getElementById("spawnLog");
 var windows = [];
 
 let beans = 0;
+let spawning = false;
+let dev = false;
+
+let password = "bacon";
 
 function openWindow(url) {
   var topPos = Math.floor(Math.random() * 1000);
@@ -31,7 +35,7 @@ function log(txt) {
 }
 
 function spawnBeans(num) {
-  if (beans > 49) {
+  if (num > 49) {
     alert("Spawning more than 50 beans may take a while.")
   }
   log('Spawning ' + num + ' beans...')
@@ -104,7 +108,23 @@ button5.addEventListener("click", function () {
 customButton.addEventListener('click', function () {
   let num = prompt("How many beans do you want to spawn?")
   if (num) {
-    spawnBeans(num);
+    if (num == password) {
+      if (dev) {
+        dev = false;
+        alert("dev mode disabled")
+      }
+      else {
+        dev = true;
+        alert("dev mode active - you can now spawn unlimited beans")
+      }
+      return
+    }
+    if (num <= 100 || dev == true) {
+      spawnBeans(num);
+    }
+    else {
+      alert("You cannot spawn more than 100 beans at a time. Sorry...")
+    }
   }
 });
 

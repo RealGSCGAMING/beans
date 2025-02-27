@@ -1,15 +1,33 @@
 const content = document.getElementById("mainContent");
 
+content.innerHTML =
+  "<h1>Rolling bean...</h1><img src='./beans/rolling.png' style='width:250; height:250' />";
+
+for (let i = 0; i < 100; i++) {
+  
+}
+
 let bean = Math.floor(Math.random() * 13);
 
-if (Math.floor(Math.random() * 25) == 0) {
+if (Math.floor(Math.random() * 50) == 0) {
   bean = -1;
+}
+else if (Math.floor(Math.random() * 25) == 0) {
+  bean = -2;
+}
+
+if (bean == -2) {
+  content.innerHTML =
+    "<h1>Pineapple.</h1><img src='./beans/pineapple.png' style='width:350; height:250' />";
+  document.body.style.backgroundColor = "yellow";
+  window.resizeTo(500, 500)
 }
 
 if (bean == -1) {
   content.innerHTML =
     "<h1>GOLDEN BEAN!!!!</h1><img src='./beans/goldenbean.webp' style='width:250; height:250' />";
   document.body.style.backgroundColor = "gold";
+  window.resizeTo(750, 750)
 }
 
 if (bean == 0) {
@@ -76,3 +94,8 @@ if (bean == 12) {
   content.innerHTML =
     "<h1>Spring Bean</h1><img src='./beans/springbean.webp' style='width:250; height:250' />";
 }
+
+
+/*for (let i = 0; i < 500; i++) {
+  window.moveBy(1, 1)
+}*/
