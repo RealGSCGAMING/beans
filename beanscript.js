@@ -3,7 +3,7 @@ const content = document.getElementById("mainContent");
 let bean = window["bean"];
 
 content.innerHTML =
-  "<h1>Rolling bean...</h1><img src='./beans/rolling.png' style='width:250; height:250' />";
+  "<h1>Loading bean...</h1><img src='./beans/rolling.png' style='width:250; height:250' />";
 
 setTimeout(function () {
   if (bean == -4) {
